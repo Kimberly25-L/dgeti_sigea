@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Maestro · DGETI</title>
+    <link rel="icon" href="img/icono.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="panel-header">
+        <div class="cabecera-sesion">
+            <img src="img/logo.jpg" alt="Logo" class="logo-mini">
+            <div>
+                <span class="badge">PORTAL DOCENTE</span>
+                <h1>Panel del Maestro</h1>
+                <p>Gestiona las calificaciones y reportes de tus grupos.</p>
+            </div>
+        </div>
+        <button class="btn-secundario" onclick="cerrarSesion()">Cerrar sesión</button>
+    </header>
+
+    <main class="panel-maestro">
+        <section class="perfil-card">
+            <div class="avatar">👨‍🏫</div>
+            <div class="perfil-info">
+                <span class="texto-secundario">Docente</span>
+                <h2 id="nombreMaestro">…</h2>
+                <div class="datos-alumno">
+                    <span><strong>Especialidad:</strong> <span id="espMaestro">—</span></span>
+                    <span><strong>Periodo:</strong> <span id="periodo">—</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel-card">
+            <div class="panel-title"><div><span class="seccion-label">GESTIÓN ACADÉMICA</span><h2>Seleccionar grupo</h2></div></div>
+            <div class="form-grid">
+                <div><label for="asignatura">Asignatura</label><select id="asignatura" class="control-formulario"></select></div>
+                <div><label for="grupo">Grupo</label><select id="grupo" class="control-formulario"></select></div>
+            </div>
+            <button class="boton-registro" onclick="cargarGrupo()">Cargar grupo</button>
+        </section>
+
+        <section id="seccionAlumnos" class="panel-card oculto">
+            <div class="panel-title">
+                <div><span class="seccion-label">GRUPO</span><h2 id="tituloGrupo">Lista de alumnos</h2></div>
+                <span class="solo-lectura">✏️ Edición docente</span>
+            </div>
+            <div class="tabla-responsive">
+                <table class="tabla-academica tabla-maestro">
+                    <thead><tr><th>N° Control</th><th>Alumno</th><th>Calificación</th><th>Conducta</th></tr></thead>
+                    <tbody id="cuerpoAlumnos"></tbody>
+                </table>
+            </div>
+            <br>
+            <button class="boton-registro" onclick="guardarCambios()">Guardar calificaciones</button>
+        </section>
+
+        <section class="panel-card">
+            <div class="panel-title"><div><span class="seccion-label">DISCIPLINA</span><h2>Registrar reporte de conducta</h2></div><span class="icono-titulo">📋</span></div>
+            <p class="descripcion">Carga primero un grupo para elegir al alumno.</p>
+            <div class="form-fila">
+                <div><label for="selAlumnoRep">Alumno</label><select id="selAlumnoRep" class="control-formulario"></select></div>
+                <div><label for="tipoReporte">Tipo</label>
+                    <select id="tipoReporte" class="control-formulario">
+                        <option value="indisciplina">Indisciplina</option><option value="retardo">Retardo</option><option value="otro">Otro</option>
+                    </select></div>
+            </div>
+            <label for="descReporte">Descripción</label>
+            <textarea id="descReporte" class="control-formulario" maxlength="500"></textarea>
+            <button class="boton-registro" onclick="enviarReporte()">Registrar reporte</button>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="js/app.js"></script>
+    <script src="js/maestro.js"></script>
+</body>
+</html>

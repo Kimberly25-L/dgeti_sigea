@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3a0816">
+    <meta name="description" content="SIGEA: Sistema Integral de Gestión Educativa y Administrativa. Acceso a los módulos Sistema Académico DGETI y Proceso de Titulación.">
+    <title>SIGEA | Sistema Integral de Gestión Educativa y Administrativa</title>
+    <link rel="icon" href="gestor_dgeti/img/icono.ico">
+    <link rel="stylesheet" href="CSS/stilo.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="fondo-decorativo fondo-uno" aria-hidden="true"></div>
+    <div class="fondo-decorativo fondo-dos" aria-hidden="true"></div>
+
+    <header class="encabezado">
+        <a class="marca" href="menu.html" aria-label="SIGEA, inicio">
+            <span class="marca-logo">
+                <img src="gestor_dgeti/img/logo.jpg" alt="Logo DGETI" onerror="this.parentNode.textContent='S'">
+            </span>
+            <span class="marca-texto">
+                <strong>SIGEA</strong>
+                <small>Sistema Integral de Gestión Educativa y Administrativa</small>
+            </span>
+        </a>
+
+        <span class="estado-sistema">
+            <span class="estado-punto" aria-hidden="true"></span>
+            Sistema de acceso
+        </span>
+    </header>
+
+    <main class="contenido">
+
+        <!-- PORTADA -->
+        <section class="portada">
+            <div class="bienvenida">
+                <p class="sobretitulo"><span></span> UNA SOLA PLATAFORMA · TRES MÓDULOS</p>
+                <h1>Todo comienza<br><span>por aquí.</span></h1>
+                <p class="descripcion">
+                    Bienvenido a SIGEA. Del aula a tu título, contigo en cada paso:
+                    elige el módulo al que deseas ingresar.
+                </p>
+
+                <ul class="siglas" aria-label="Significado de SIGEA">
+                    <li><b>S</b>istema</li>
+                    <li><b>I</b>ntegral</li>
+                    <li>de <b>G</b>estión</li>
+                    <li><b>E</b>ducativa</li>
+                    <li>y <b>A</b>dministrativa</li>
+                </ul>
+            </div>
+
+            <div class="mascota-zona">
+                <p class="burbuja" id="burbuja">¡Hola! Somos los Jaguares 🐾 ¿A dónde vamos hoy?</p>
+                <button type="button" class="mascota-btn" id="mascota" aria-label="Saludar a Jaguares">
+                    <img src="gestor_dgeti/img/mascota.jpg" alt="Jaguares, mascota de SIGEA">
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= MÓDULOS ================= -->
+        <section class="modulos" aria-label="Módulos disponibles">
+
+            <article class="tarjeta tarjeta-dgeti">
+                <div class="tarjeta-superior">
+                    <span class="icono-tarjeta" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20M8 7h8M8 10.5h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <span class="numero-modulo">01 / MÓDULO</span>
+                </div>
+                <h2>Sistema Educativo y Administrativo</h2>
+                <p>Portal de gestión académica para alumnos, maestros y administradores: calificaciones, reportes de conducta y asistente de ideas de proyecto.</p>
+                <ul class="etiquetas">
+                    <li>Alumnos</li>
+                    <li>Maestros</li>
+                    <li>Calificaciones</li>
+                    <li>Asistente Jaguares</li>
+                </ul>
+                <a class="boton boton-dorado" href="gestor_dgeti/menu_idx.html">
+                    <span>Entrar al portal</span>
+                    <span class="flecha" aria-hidden="true">↗</span>
+                </a>
+            </article>
+
+            <article class="tarjeta tarjeta-titulacion">
+                <div class="tarjeta-superior">
+                    <span class="icono-tarjeta" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 3 20 7v5c0 4.5-3.1 7.5-8 9-4.9-1.5-8-4.5-8-9V7l8-4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="numero-modulo">02 / MÓDULO</span>
+                </div>
+                <h2>Proceso de Titulación</h2>
+                <p>Rumbo a la titulación en el CETis 120: conoce los requisitos de cada modalidad y consulta el avance de tu proceso con tu número de control.</p>
+                <ul class="etiquetas">
+                    <li>Promedio</li>
+                    <li>Prototipo / Proyecto</li>
+                    <li>Experiencia laboral</li>
+                    <li>Consulta de progreso</li>
+                    <li>Asistente virtual</li>
+                </ul>
+                <a class="boton boton-azul" href="Titulaci%C3%B3n%20-%20CETis%20120/principal.php">
+                    <span>Entrar al módulo</span>
+                    <span class="flecha" aria-hidden="true">↗</span>
+                </a>
+            </article>
+
+            <article class="tarjeta tarjeta-prestamos">
+                <div class="tarjeta-superior">
+                    <span class="icono-tarjeta" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 3 20 7v5c0 4.5-3.1 7.5-8 9-4.9-1.5-8-4.5-8-9V7l8-4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="numero-modulo">03 / MÓDULO</span>
+                </div>
+                <h2>Sistema de prestamo </h2>
+                <p>Sistema de prestamos en el CETis 120: consulta que materiales puedes adquirir en forma de prestamo y que requisitos necesitas para solicitarlos.</p>
+                <ul class="etiquetas">
+                    <li>Calculadora</li>
+                    <li>Protyector</li>
+                    <li>Estenciones </li>
+                    <li>Laptop</li>
+                    <li>Cable red</li>
+                </ul>
+                <a class="boton boton-verde" href="prestamos cetis/presetamosmateriales.html">
+                    <span>Entrar al módulo</span>
+                    <span class="flecha" aria-hidden="true">↗</span>
+                </a>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <p class="pie-linea">
+            © <span id="anio">2026</span> SIGEA ·  <strong>Derechos Reservados</strong>
+        </p>
+        <!-- >>> ESCRIBE AQUÍ los nombres completos de los integrantes <<< -->
+        <p class="pie-linea">
+            <strong>Elaborado por: Miguel Angel Barcenas Gonzales - Cinthya Jaquelinne Castro Ramirez - Irving Gamiño Mejia - Kimberly Paola Lara Andrade  </strong> 
+        </p>
+    </footer>
+
+    <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+</body>
+</html>

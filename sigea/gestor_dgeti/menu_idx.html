@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEA | Sistema Educativo y Administrativo</title>
+    <link rel="icon" href="img/icono.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-inicio">
+
+    <header class="inicio-header">
+        <div class="cabecera-marca">
+            <img src="img/icono.ico" alt="Logo DGETI" class="logo">
+            <div>
+                <span class="badge">SISTEMA EDUCATIVO Y ADMINISTRATIVO</span>
+                <h1>SIGEA</h1>
+                <p>Selecciona el tipo de usuario para ingresar al sistema.</p>
+            </div>
+            <img src="img/mascota.jpg" alt="Buhito, mascota del sistema" class="mascota" id="mascota">
+        </div>
+        <div class="burbuja" id="burbuja" style="margin:14px auto 0">¡Hola! Somos Jagurares  🐾 Haz clic nosotros.</div>
+        <br>
+        <button class="btn-secundario"> <a href="/sigea/menu.html">Menu Principal</a> </button>
+    </header>
+
+    <main class="card-container">
+        <a href="login.html?rol=maestro" class="card-link">
+            <article class="card" data-color="azul">
+                <div class="card-icon">👨‍🏫</div>
+                <h2>Maestro</h2>
+                <p>Registra calificaciones y reportes de conducta de tus grupos.</p>
+                <span class="card-button">Ingresar</span>
+            </article>
+        </a>
+        <a href="login.html?rol=alumno" class="card-link">
+            <article class="card" data-color="verde">
+                <div class="card-icon">👨‍🎓</div>
+                <h2>Alumno</h2>
+                <p>Consulta tu historial, promedio y pide ideas de al asistente.</p>
+                <span class="card-button">Ingresar</span>
+            </article>
+        </a>
+        <a href="login.html?rol=admin" class="card-link">
+            <article class="card" data-color="naranja">
+                <div class="card-icon">⚙️</div>
+                <h2>Administrador</h2>
+                <p>Da de alta alumnos, maestros, grupos y materias.</p>
+                <span class="card-button">Ingresar</span>
+            </article>
+        </a>
+        <a href="login.html?rol=admin_bot" class="card-link">
+            <article class="card" data-color="morado">
+                <div class="card-icon">🤖</div>
+                <h2>Admin del asistente</h2>
+                <p>Alimenta los conocimientos del chatbot de proyectos.</p>
+                <span class="card-button">Ingresar</span>
+            </article>
+        </a>
+    </main>
+
+    <p style="margin-top:10px">¿Ya te dio de alta el administrador y aún no tienes cuenta?
+        <a href="registro.html" style="color:var(--azul);font-weight:700">Activa tu cuenta aquí</a></p>
+
+    <footer></footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        /* La mascota responde al hacer clic y cambia el tema de color */
+        const frases = ["¡Los proyectos son más divertidos en equipo! 💡", "¿Ya tienes idea para tu proyecto? Pregúntame al entrar 🚀", "Cambia el color del sistema con los círculos de abajo 🎨", "¡Éxito en tu parcial! 🎓"];
+        const nombresTema = Object.keys(TEMAS); let n = 0;
+        document.getElementById("mascota").onclick = function () {
+            document.getElementById("burbuja").textContent = frases[n % frases.length];
+            aplicarTema(nombresTema[++n % nombresTema.length]);
+        };
+    </script>
+</body>
+</html>

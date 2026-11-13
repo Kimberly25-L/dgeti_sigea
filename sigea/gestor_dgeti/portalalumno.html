@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal del Alumno · DGETI</title>
+    <link rel="icon" href="img/icono.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="panel-header">
+        <div class="cabecera-sesion">
+            <img src="img/logo.jpg" alt="Logo" class="logo-mini">
+            <div>
+                <span class="badge">PORTAL ACADÉMICO</span>
+                <h1>Panel del Alumno</h1>
+                <p>Consulta tu información académica.</p>
+            </div>
+        </div>
+        <button class="btn-secundario" onclick="cerrarSesion()">Cerrar sesión</button>
+    </header>
+
+    <main class="panel-alumno">
+        <section class="perfil-card">
+            <div class="avatar">👨‍🎓</div>
+            <div class="perfil-info">
+                <span class="texto-secundario">Alumno</span>
+                <h2 id="nombreAlumno">…</h2>
+                <div class="datos-alumno">
+                    <span><strong>N° Control:</strong> <span id="controlAlumno">—</span></span>
+                    <span><strong>Grupo:</strong> <span id="grupoAlumno">—</span></span>
+                    <span><strong>Especialidad:</strong> <span id="espAlumno">—</span></span>
+                </div>
+            </div>
+            <div class="estado-alumno"><span class="estado-activo">● Cuenta activa</span><small>Información académica</small></div>
+        </section>
+
+        <section class="resumen-grid">
+            <div class="estadistica-card"><div class="estadistica-icon azul">📊</div><div><span>Promedio general</span><strong id="promedioGeneral">0.00</strong><small>Calculado automáticamente</small></div></div>
+            <div class="estadistica-card"><div class="estadistica-icon verde">📚</div><div><span>Materias calificadas</span><strong id="numMaterias">0</strong><small>Historial</small></div></div>
+            <div class="estadistica-card"><div class="estadistica-icon morado">✓</div><div><span>Materias aprobadas</span><strong id="numAprobadas">0</strong><small>Calificación ≥ 6</small></div></div>
+            <div class="estadistica-card"><div class="estadistica-icon naranja">📋</div><div><span>Reportes</span><strong id="numeroReportes">0</strong><small>Conducta</small></div></div>
+        </section>
+
+        <div class="contenido-grid">
+            <section class="panel-card historial">
+                <div class="panel-title">
+                    <div><span class="seccion-label">REGISTRO ACADÉMICO</span><h2>Historial académico</h2></div>
+                    <span class="solo-lectura">🔒 Solo consulta</span>
+                </div>
+                <p class="descripcion">Las calificaciones las registran los docentes y se muestran directamente desde la base de datos.</p>
+                <div class="tabla-responsive">
+                    <table class="tabla-academica">
+                        <thead><tr><th>Materia</th><th>Docente</th><th>Periodo</th><th>Calificación</th><th>Estado</th></tr></thead>
+                        <tbody id="tablaCalificaciones"></tbody>
+                    </table>
+                </div>
+                <div class="nota-sistema">🔒 <strong>Información protegida:</strong> solo usuarios autorizados pueden modificar las calificaciones.</div>
+
+                <div style="margin-top:24px">
+                    <span class="seccion-label">DISCIPLINA</span>
+                    <h2 style="font-size:1.1rem;margin:4px 0 8px">Historial de conducta</h2>
+                    <div id="listaReportes"></div>
+                </div>
+            </section>
+
+            <aside class="columna-derecha">
+                <section class="panel-card">
+                    <div class="panel-title">
+                        <div><span class="seccion-label">ASISTENTE</span><h2>Jaguares · Ideas de proyecto</h2></div>
+                        <img src="img/mascota.jpg" alt="Jaguares" class="mascota-chica">
+                    </div>
+                    <div class="chat" id="chat"></div>
+                    <div class="chips" id="chips"></div>
+                    <div class="chat-entrada">
+                        <input type="text" id="mensajeBot" class="control-formulario" placeholder="Ej. ideas de electrónica" maxlength="300">
+                        <button class="boton-registro" id="btnEnviarBot">Enviar</button>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <section class="promedio-card">
+            <div>
+                <span class="seccion-label">RESUMEN ACADÉMICO</span>
+                <h2>Promedio general</h2>
+                <p>Este promedio se obtiene de las calificaciones oficiales registradas en el sistema.</p>
+            </div>
+            <div class="promedio-grande"><span id="promedioFinal">0.00</span><span> / 10</span></div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="js/app.js"></script>
+    <script src="js/bot.js"></script>
+    <script src="js/alumno.js"></script>
+</body>
+</html>

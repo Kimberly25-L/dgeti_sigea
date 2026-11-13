@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamo de Materiales - CETis 120</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="logocetis120.png">
+</head>
+<body>
+
+<header class="encabezado">
+    <img src="logocetis120.png" alt="Logo CETis 120" class="logo"
+         onerror="this.style.display='none'">
+    <div class="titulo-encabezado">
+        <h1>Sistema de Préstamo</h1>
+        <h2>Materiales Escolares</h2>
+        <p>CETis 120 - Josefa Ortiz de Domínguez</p>
+    </div>
+
+    <details class="alumno-menu" id="menuAlumno">
+        <summary>Inicio de sesión del alumno</summary>
+        <div class="alumno-desplegable">
+            <h3>Acceso del alumno</h3>
+            <p>Inicia sesión con los datos de tu cuenta. Si aún no tienes una, créala aquí.</p>
+            <form id="formCuentaAlumno">
+                <label for="cuentaNombre">Nombre completo</label>
+                <input id="cuentaNombre" type="text" maxlength="150" required placeholder="Nombre completo" autocomplete="name">
+                <label for="cuentaControl">Número de control (14 dígitos)</label>
+                <input id="cuentaControl" type="text" inputmode="numeric" maxlength="14" minlength="14" pattern="[0-9]{14}" required placeholder="14 dígitos" autocomplete="username">
+                <label for="cuentaEspecialidad">Especialidad</label>
+                <select id="cuentaEspecialidad" required>
+                    <option value="">Selecciona tu especialidad</option><option>Programación</option><option>Contabilidad</option><option>Electrónica</option><option>Puericultura</option><option>Ventas</option><option>Hospedaje</option><option>Cosmetología</option><option>Comercio internacional y aduanas</option><option>Ciberseguridad</option><option>Inteligencia artificial</option><option>E-Commerce</option>
+                </select>
+                <label for="cuentaTurno">Turno</label>
+                <select id="cuentaTurno" required><option value="">Selecciona tu turno</option><option>Matutino</option><option>Vespertino</option></select>
+                <label for="cuentaPassword">Contraseña</label>
+                <input id="cuentaPassword" type="password" minlength="6" autocomplete="current-password" required placeholder="Mínimo 6 caracteres">
+                <div class="acciones-cuenta">
+                    <button type="submit" id="entrarCuentaAlumno" name="accionCuenta" value="entrar" class="btn-continuar">Iniciar sesión</button>
+                    <button type="submit" id="crearCuentaAlumno" name="accionCuenta" value="crear" class="btn-secundario">Crear cuenta</button>
+                </div>
+            </form>
+            <p id="mensajeCuentaAlumno" class="mensaje" aria-live="polite"></p>
+        </div>
+    </details>
+
+    <details class="admin-menu">
+        <summary>Administrador</summary>
+        <div class="admin-desplegable">
+            <h3>Acceso de administrador</h3>
+            <p>Ingresa tus credenciales y resuelve el CAPTCHA para abrir el panel.</p>
+            <form id="formAdmin">
+                <label for="nombreAdmin">Usuario</label>
+                <input id="nombreAdmin" type="text" autocomplete="username"
+                       placeholder="Usuario de administrador" required>
+
+                <label for="numeroAdmin">Contraseña</label>
+                <input id="numeroAdmin" type="password" autocomplete="current-password"
+                       placeholder="Contraseña" required>
+
+                <p id="captchaPregunta" class="captcha-pregunta" aria-live="polite">
+                    CAPTCHA: ¿Cuánto es 4 + 7?
+                </p>
+                <label for="captchaRespuesta">Escribe el resultado</label>
+                <input id="captchaRespuesta" type="number" inputmode="numeric"
+                       placeholder="Resultado del CAPTCHA" required>
+
+                <button type="button" id="nuevoCaptcha" class="btn-secundario">
+                    Cambiar CAPTCHA
+                </button>
+                <button type="submit" class="btn-continuar">
+                    Entrar al panel
+                </button>
+            </form>
+            <p id="mensajeAdmin" class="mensaje" aria-live="polite"></p>
+        </div>
+    </details>
+</header>
+
+<nav class="menu">
+    <a href="/sigea/menu.html">Inicio</a>
+    <a href="#registro">Registro</a>
+</nav>
+
+<main>
+    <section id="inicio" class="seccion-principal">
+        <section id="catalogo" class="catalogo-seccion">
+            <h2 class="titulo-seccion">Materiales disponibles</h2>
+            <p class="limite">
+                Puedes solicitar máximo
+                <strong>2 materiales diferentes</strong>.
+            </p>
+
+            <div class="contenedor">
+
+                <article class="tarjeta"
+                    data-nombre="Computadoras" data-categoria="electronica">
+                    <img src="computadora.png" alt="Computadora">
+                    <div class="tarjeta-contenido">
+                        <h3>Computadoras</h3>
+                        <p>Computadoras disponibles para trabajos escolares en la biblioteca.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Computadoras">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta"
+                    data-nombre="Cargadores" data-categoria="electronica">
+                    <img src="cargadorlap.jpg" alt="Cargador">
+                    <div class="tarjeta-contenido">
+                        <h3>Cargadores</h3>
+                        <p>Cargadores para diferentes dispositivos.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Cargadores">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta"
+                    data-nombre="Adaptadores" data-categoria="electronica">
+                    <img src="adaptador.jpg" alt="Adaptador">
+                    <div class="tarjeta-contenido">
+                        <h3>Adaptadores</h3>
+                        <p>Adaptadores para conexiones y dispositivos.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Adaptadores">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta"
+                    data-nombre="Calculadoras" data-categoria="escolar">
+                    <img src="calc.jpg" alt="Calculadora">
+                    <div class="tarjeta-contenido">
+                        <h3>Calculadoras</h3>
+                        <p>Calculadoras para actividades y ejercicios.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Calculadoras">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta"
+                    data-nombre="Cables HDMI" data-categoria="electronica">
+                    <img src="hdmi.jpg" alt="Cable HDMI">
+                    <div class="tarjeta-contenido">
+                        <h3>Cables HDMI</h3>
+                        <p>Cables para transmitir video y audio entre dispositivos.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Cables HDMI">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta"
+                    data-nombre="Cables de red" data-categoria="electronica">
+                    <img src="Ethernet.jpg" alt="Cable de red">
+                    <div class="tarjeta-contenido">
+                        <h3>Cables de red</h3>
+                        <p>Cables para conectar dispositivos a una red.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Cables de red">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta"
+                    data-nombre="Extensiones" data-categoria="electronica">
+                    <img src="extension.jpg" alt="Extensión eléctrica">
+                    <div class="tarjeta-contenido">
+                        <h3>Extensiones</h3>
+                        <p>Extensiones para conectar dispositivos a mayor distancia.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Extensiones">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta"
+                    data-nombre="Proyectores" data-categoria="electronica">
+                    <img src="Proyector.jpg" alt="Proyector">
+                    <div class="tarjeta-contenido">
+                        <h3>Proyectores</h3>
+                        <p>Para proyectar imágenes y videos en clase.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Proyectores">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta"
+                    data-nombre="Routers" data-categoria="electronica">
+                    <img src="Router.jpg" alt="Router">
+                    <div class="tarjeta-contenido">
+                        <h3>Routers</h3>
+                        <p>Dispositivos para conectar equipos a una red.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Routers">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta"
+                    data-nombre="Cables de alimentación" data-categoria="electronica">
+                    <img src="Energia.jpg" alt="Cable de alimentación">
+                    <div class="tarjeta-contenido">
+                        <h3>Cables de alimentación</h3>
+                        <p>Para conectar dispositivos a una fuente de energía.</p>
+                        <p class="disponible">Disponibles: <span class="cantidad">3</span></p>
+                        <button type="button" class="btn-prestamo"
+                            data-material="Cables de alimentación">Solicitar préstamo</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="sinResultados" class="mensaje" hidden>
+                No se encontraron materiales.
+            </p>
+        </section>
+    </section>
+
+    <section id="registro" class="seccion panel">
+        <h2>Registro del alumno</h2>
+        <p class="subtitulo">Para poder solicitar material, debes completar tu registro si eres un nuevo usuario.</p>
+        <form id="formRegistro">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" maxlength="150"
+                placeholder="Ej. Josefa Ortiz" required>
+
+            <label for="control">Número de control</label>
+            <input type="text" id="control" inputmode="numeric" maxlength="14" minlength="14" pattern="[0-9]{14}"
+                placeholder="14 dígitos" required>
+
+            <input type="password" id="passwordSolicitud" autocomplete="off" hidden aria-hidden="true">
+
+            <label for="horario">Tiempo de uso</label>
+            <select id="horario" required>
+                <option value="">Selecciona el tiempo</option>
+                <option value="30 minutos">30 minutos</option>
+                <option value="1 hora">1 hora</option>
+                <option value="2 horas">2 horas</option>
+                <option value="2 a 5 horas">2 a 5 horas</option>
+            </select>
+
+            <label for="especialidad">Especialidad</label>
+            <select id="especialidad" required>
+                <option value="">Selecciona tu especialidad</option>
+                <option>Programación</option>
+                <option>Contabilidad</option>
+                <option>Electrónica</option>
+                <option>Puericultura</option>
+                <option>Ventas</option>
+                <option>Hospedaje</option>
+                <option>Cosmetología</option>
+                <option>Comercio internacional y aduanas</option>
+                <option>Ciberseguridad</option>
+                <option>Inteligencia artificial</option>
+                <option>E-Commerce</option>
+            </select>
+
+            <label for="turno">Turno</label>
+            <select id="turno" required>
+                <option value="">Selecciona tu turno</option>
+                <option>Matutino</option>
+                <option>Vespertino</option>
+            </select>
+
+            <div class="seleccion-registro">
+                <h3>Materiales que deseas solicitar</h3>
+                <p>Selecciona hasta dos materiales en el catálogo.</p>
+                <p class="contador">
+                    Materiales seleccionados:
+                    <strong id="contador">0 / 2</strong>
+                </p>
+                <div id="listaSolicitados" class="lista-solicitados">
+                    <p class="texto-vacio">
+                        Aún no has seleccionado ningún material.
+                    </p>
+                </div>
+            </div>
+
+            <button type="submit" id="btnRegistro" class="btn-continuar">
+                Confirmar solicitud
+            </button>
+            <button type="button" id="btnEditarRegistro" class="btn-secundario" hidden>Editar datos de mi última solicitud</button>
+            <button type="button" id="btnCancelarEdicion" class="btn-secundario" hidden>Cancelar edición</button>
+            <button type="button" id="btnCancelarSolicitud" class="btn-secundario" hidden>Cancelar solicitud de material</button>
+
+            <div class="acciones-formulario">
+                <button type="reset" class="btn-secundario">Limpiar formulario</button>
+            </div>
+            <div class="acciones-sesion-final">
+                <p>Cuando termines de solicitar tus materiales, cierra tu sesión para proteger tu cuenta en esta computadora.</p>
+                <button type="button" id="cerrarSesionAlumno" class="btn-secundario btn-cerrar-sesion" hidden>Cerrar sesión</button>
+            </div>
+        </form>
+
+        <p id="mensajeRegistro" class="mensaje" aria-live="polite"></p>
+        <p id="mensajeSolicitud" class="mensaje" aria-live="polite"></p>
+        <section id="resultado" aria-live="polite"></section>
+    </section>
+
+
+
+    <div class="asistente-flotante">
+        <section id="chatbot" class="chatbot ventana-chat" hidden>
+            <div class="chatbot-header">
+                <div>
+                    <h2>Jaguar CETis 120</h2>
+                    <p>¡Hola! Aquí resuelvo tus dudas</p>
+                </div>
+                <button type="button" id="cerrarChat" class="cerrar-chat"
+                    aria-label="Cerrar chat">✕</button>
+            </div>
+
+            <div class="chatbot-body" id="chatbotBody" aria-live="polite">
+                <div class="mensaje-chat bot">
+                    ¡Hola! Pregúntame cómo solicitar materiales,
+                    cuánto tiempo puedes usarlos o cómo devolverlos.
+                </div>
+            </div>
+
+            <form id="formChatbot" class="chatbot-footer">
+                <input type="text" id="pregunta"
+                    placeholder="Escribe tu pregunta..." required>
+                <button type="submit" id="btnEnviar">Enviar</button>
+            </form>
+        </section>
+
+        <button type="button" id="abrirChat" class="mascota-jaguar"
+            aria-label="Abrir asistente jaguar"
+            aria-controls="chatbot" aria-expanded="false">
+             <img src="logocetis120.png" alt="Logo CETis 120" class="logo"
+         onerror="this.style.display='none'"> <span class="texto-mascota">¡Pregúntame!</span>
+        </button>
+    </div>
+</main>
+
+
+   
+
+<footer class="pie-pagina">
+    <p>© 2026 CETis 120 - Sistema de Préstamo de Materiales Escolares</p>
+    <p>Camila Isabela Jimenez Valencia y Cristian Ricardo Bautista Gaona</p>
+    <p>Josefa Ortiz de Domínguez </p>
+    <p>Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

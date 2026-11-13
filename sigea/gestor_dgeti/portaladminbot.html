@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin del Asistente · DGETI</title>
+    <link rel="icon" href="img/icono.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="panel-header">
+        <div class="cabecera-sesion">
+            <img src="img/logo.jpg" alt="Logo" class="logo-mini">
+            <div>
+                <span class="badge">ADMINISTRADOR DEL ASISTENTE</span>
+                <h1>Conocimiento de Jaguares</h1>
+                <p>Sesión: <strong id="nombreSesion">…</strong></p>
+            </div>
+        </div>
+        <button class="btn-secundario" onclick="cerrarSesion()">Cerrar sesión</button>
+    </header>
+
+    <main class="panel-admin">
+        <section class="panel-card">
+            <div class="panel-title">
+                <div><span class="seccion-label">ENTRENAMIENTO</span><h2 id="tituloForm">Nuevo conocimiento</h2></div>
+                <img src="img/mascota.jpg" alt="Jaguares" class="mascota-chica">
+            </div>
+            <p class="descripcion">Lo que escribas aquí es lo que el asistente usará para recomendar proyectos a los alumnos. Las palabras clave (separadas por comas) ayudan a encontrar la respuesta correcta.</p>
+            <form id="formBot">
+                <input type="hidden" id="kId">
+                <div class="form-fila">
+                    <div><label for="kTema">Tema</label><input id="kTema" class="control-formulario" placeholder="Ej. Electrónica y robótica" required></div>
+                    <div><label for="kPregunta">Pregunta típica</label><input id="kPregunta" class="control-formulario" placeholder="Ej. Ideas de proyectos de electrónica" required></div>
+                </div>
+                <label for="kContenido">Ideas / respuesta</label>
+                <textarea id="kContenido" class="control-formulario" required></textarea>
+                <label for="kPalabras">Palabras clave</label>
+                <input id="kPalabras" class="control-formulario" placeholder="arduino, sensor, robot, circuito">
+                <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="kActivo" checked> Activo (visible para el asistente)</label>
+                <br>
+                <div class="form-fila">
+                    <button type="submit" class="boton-registro">Guardar conocimiento</button>
+                    <button type="button" class="boton-registro" onclick="limpiar()" style="background:#64748b">Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+        <div class="contenido-grid">
+            <section class="panel-card">
+                <div class="panel-title"><div><span class="seccion-label">BASE DE CONOCIMIENTO</span><h2>Registros del asistente</h2></div></div>
+                <div class="tabla-responsive">
+                    <table class="tabla-academica">
+                        <thead><tr><th>Tema</th><th>Pregunta</th><th>Palabras clave</th><th>Estado</th><th>Acción</th></tr></thead>
+                        <tbody id="tablaBot"></tbody>
+                    </table>
+                </div>
+            </section>
+            <aside class="columna-derecha">
+                <section class="panel-card">
+                    <div class="panel-title"><div><span class="seccion-label">PRUEBA</span><h2>Probar asistente</h2></div></div>
+                    <div class="chat" id="chat"></div>
+                    <div class="chips" id="chips"></div>
+                    <div class="chat-entrada">
+                        <input type="text" id="mensajeBot" class="control-formulario" placeholder="Escribe una pregunta" maxlength="300">
+                        <button class="boton-registro" id="btnEnviarBot">Enviar</button>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="js/app.js"></script>
+    <script src="js/bot.js"></script>
+    <script src="js/adminbot.js"></script>
+</body>
+</html>

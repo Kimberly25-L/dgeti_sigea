@@ -1,0 +1,160 @@
+[
+    {
+        "id": "1a83b6af7e058f8d",
+        "tema": "horarios de la biblioteca",
+        "palabras_clave": [
+            "horario",
+            "biblioteca",
+            "matutino",
+            "vespertino",
+            "turno"
+        ],
+        "respuesta": "El horario de la biblioteca para el turno matutino es de 6:30 a.m. a 1:30 p.m. Y para el turno vespertino el horario es de 2:00 p.m. a 8:00 p.m."
+    },
+    {
+        "id": "e09124b24b89d1b0",
+        "tema": "que pasa si pierdo un material",
+        "palabras_clave": [
+            "perder",
+            "romper",
+            "solucion",
+            "extravio",
+            "descomponer",
+            "pagar",
+            "rompi",
+            "perdi",
+            "descompuse",
+            "pierdo"
+        ],
+        "respuesta": "Deberás reponer el material que hayas extraviado, roto, descompuesto, etc. O de lo contrario obtendras una sanción."
+    },
+    {
+        "id": "68d88bcca4c83f14",
+        "tema": "que pasa si me registre mal",
+        "palabras_clave": [
+            "numero de control",
+            "registro",
+            "equivoque",
+            "mal",
+            "nombre",
+            "especialidad",
+            "turno",
+            "horario",
+            "horas"
+        ],
+        "respuesta": "Puedes editar tu solicitud con el botón \"editar\" que se encuentra al final del apartado de registro, o también puedes acudir a la biblioteca escolar para que elimien tu registro y puedas volver a ingresar tus datos."
+    },
+    {
+        "id": "779cc30cb5c08d46",
+        "tema": "que pasa si me excedo de tiempo",
+        "palabras_clave": [
+            "tiempo",
+            "excedo",
+            "paso",
+            "ocurre",
+            "tardo",
+            "horas",
+            "minutos"
+        ],
+        "respuesta": "Tienes como limite una hora extra para devolver el material que solicitaste o volver a registrarte para reestablecer tu tiempo de uso."
+    },
+    {
+        "id": "7cc92fac25da68de",
+        "tema": "donde puedo recoger el material",
+        "palabras_clave": [
+            "recoger",
+            "recojo",
+            "donde",
+            "como",
+            "biblioteca"
+        ],
+        "respuesta": "Puedes pasar a la biblioteca escolar a recoger el material que solicitaste y devolverlo en el mismo sitio."
+    },
+    {
+        "id": "21141092f5b810fa",
+        "tema": "donde devuelvo el material",
+        "palabras_clave": [
+            "devuelvo",
+            "regreso",
+            "donde",
+            "biblioteca",
+            "llevo"
+        ],
+        "respuesta": "Puedes devolver el material en la biblioteca escolar al terminar su uso."
+    },
+    {
+        "id": "8c165ac7426d0389",
+        "tema": "que hago si ya no hay material",
+        "palabras_clave": [
+            "no",
+            "haber",
+            "disponible",
+            "acabo",
+            "termino",
+            "tienen",
+            "encuentro",
+            "que",
+            "pasa",
+            "hago",
+            "no hay material"
+        ],
+        "respuesta": "En caso de que no haya material disponible tendras que esperar a que otro alumno\/docente, termine su uso y lo devuelva."
+    },
+    {
+        "id": "74b1024854acc70c",
+        "tema": "cuantos materiales solicito",
+        "palabras_clave": [
+            "cuanto",
+            "cuantos",
+            "solicito",
+            "escojo",
+            "limite"
+        ],
+        "respuesta": "Hay un limite de 2 materiales como maximo por alumno, y un minimo de 1 material."
+    },
+    {
+        "id": "481302350832c151",
+        "tema": "que material hay",
+        "palabras_clave": [
+            "cantidad",
+            "cuanto",
+            "cual",
+            "cuales",
+            "que",
+            "nombre",
+            "llama",
+            "hay",
+            "tienes",
+            "dispones",
+            "disponible"
+        ],
+        "respuesta": "En el catálogo estan disponibles las computadoras, cargadores, adaptadores, cables red, router, cables HDMI, extensiones, proyectores, cable de alimentación."
+    },
+    {
+        "id": "a538620b0e576d77",
+        "tema": "como solicito un material",
+        "palabras_clave": [
+            "como",
+            "solicito",
+            "un",
+            "puedo",
+            "hago",
+            "solicitar",
+            "pido",
+            "pedir"
+        ],
+        "respuesta": "Para solicitar un material primero debes iniciar sesion, debes ingresar los datos que se te solicitan en el apartado de \"inicio de sesion del alumno\".\r\nAl estar registrado podras solicitar los materiales que desees."
+    },
+    {
+        "id": "eed15ed1eeb90f6e",
+        "tema": "por que no puedo solicitar material",
+        "palabras_clave": [
+            "por",
+            "que",
+            "elegir",
+            "elijo",
+            "no"
+        ],
+        "respuesta": "Si no puedes solicitar un material, primero verifica que hayas iniciado sesion correctamente o estes previamente registrado. Tambien debes verificar si tienes material pendiente del cual no registrastre su devolucion anteriormente. En el caso de alguna de estas situaciones no podras solicitar material."
+    }
+]

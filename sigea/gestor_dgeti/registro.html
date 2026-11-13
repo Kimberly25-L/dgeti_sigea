@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activar cuenta · DGETI</title>
+    <link rel="icon" href="img/icono.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="contenedor-formulario">
+        <div class="formulario-header">
+            <img src="img/mascota.jpg" alt="Jaguares" class="mascota-chica">
+            <span class="badge">ACTIVAR CUENTA</span>
+            <h1>Crea tu contraseña</h1>
+            <p>Solo funciona si el administrador ya te dio de alta.</p>
+        </div>
+        <div class="formulario-body">
+            <form id="formRegistro">
+                <label for="rol">Soy</label>
+                <select id="rol" class="control-formulario">
+                    <option value="alumno">Alumno</option>
+                    <option value="maestro">Maestro</option>
+                </select>
+
+                <label for="identificador" id="lblId">Número de control</label>
+                <input type="text" id="identificador" class="control-formulario" required>
+
+                <label for="nombre">Nombre completo (como lo registró el administrador)</label>
+                <input type="text" id="nombre" class="control-formulario" required>
+
+                <label for="correo">Correo (opcional)</label>
+                <input type="email" id="correo" class="control-formulario">
+
+                <label for="password">Contraseña (mínimo 8 caracteres)</label>
+                <input type="password" id="password" class="control-formulario" minlength="8" autocomplete="new-password" required>
+
+                <label for="password2">Repite la contraseña</label>
+                <input type="password" id="password2" class="control-formulario" minlength="8" autocomplete="new-password" required>
+
+                <label for="captcha">Captcha de seguridad</label>
+                <div class="captcha-box">
+                    <img id="captchaImg" alt="Captcha" width="170" height="56">
+                    <button type="button" class="btn-refrescar" onclick="recargarCaptcha()" title="Nuevo código">🔄</button>
+                </div>
+                <input type="text" id="captcha" class="control-formulario" placeholder="Escribe los 5 caracteres" maxlength="5" autocomplete="off" required>
+
+                <button type="submit" class="boton-registro">Activar cuenta</button>
+                <p id="mensajeError" class="mensaje-error"></p>
+            </form>
+            <a href="menu_idx.html" class="volver">← Regresar al menú principal</a>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

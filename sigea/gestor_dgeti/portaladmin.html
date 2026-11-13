@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración · DGETI</title>
+    <link rel="icon" href="img/icono.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="panel-header">
+        <div class="cabecera-sesion">
+            <img src="img/logo.jpg" alt="Logo" class="logo-mini">
+            <div>
+                <span class="badge">ADMINISTRACIÓN</span>
+                <h1>Panel de Control</h1>
+                <p>Sesión: <strong id="nombreSesion">…</strong></p>
+            </div>
+        </div>
+        <button class="btn-secundario" onclick="cerrarSesion()">Cerrar sesión</button>
+    </header>
+
+    <main class="panel-admin">
+        <div class="tabs">
+            <button class="tab activa" data-tipo="alumno">👨‍🎓 Alumnos</button>
+            <button class="tab" data-tipo="maestro">👨‍🏫 Maestros</button>
+            <button class="tab" data-tipo="grupo">🏫 Grupos</button>
+            <button class="tab" data-tipo="materia">📚 Materias</button>
+        </div>
+
+        <section class="panel-card">
+            <div class="panel-title">
+                <div><span class="seccion-label">ALTA EN BASE DE DATOS</span><h2 id="tituloForm">Alta</h2></div>
+                <span class="icono-titulo">⚙️</span>
+            </div>
+            <p class="descripcion">Los alumnos y maestros dados de alta aquí podrán activar su cuenta. Quien no esté en esta lista no podrá entrar al sistema.</p>
+            <form id="formAdmin">
+                <div class="form-fila">
+                    <div id="camposForm" style="display:contents"></div>
+                    <button type="submit" class="boton-registro">Registrar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel-card">
+            <div class="panel-title"><div><span class="seccion-label">SISTEMA</span><h2 id="tituloTabla">Registros</h2></div></div>
+            <div class="tabla-responsive">
+                <table class="tabla-academica">
+                    <thead><tr id="encabezado"></tr></thead>
+                    <tbody id="tablaAdmin"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="js/app.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

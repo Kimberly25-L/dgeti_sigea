@@ -1,0 +1,1052 @@
+ /* CONFIGURACIÓN GENERAL */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #101b35;
+    color: white;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    background-color: #800020;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.encabezado h1 {
+    margin: 0;
+}
+
+.encabezado h2 {
+    margin: 5px 0;
+}
+
+.encabezado p {
+    margin: 5px 0;
+}
+
+
+/* MENÚ DE NAVEGACIÓN */
+
+.menu {
+    background-color: #5f0018;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #a00030;
+}
+
+
+/* ADMINISTRADOR DESPLEGABLE */
+
+.admin-menu {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    z-index: 1001;
+}
+
+.admin-menu summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 14px;
+    border: 1px solid #ffffff80;
+    border-radius: 8px;
+    background-color: #ffffff18;
+    color: white;
+    font-weight: bold;
+}
+
+.admin-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.admin-menu summary:hover {
+    background-color: #ffffff30;
+}
+
+.admin-desplegable {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(320px, 88vw);
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    color: #263449;
+    box-shadow: 0 10px 30px #0004;
+    z-index: 1002;
+}
+
+.admin-desplegable h3 {
+    margin-bottom: 8px;
+}
+
+.admin-desplegable label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.admin-desplegable input {
+    margin-top: 5px;
+}
+
+.admin-desplegable button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* FORMULARIO DE ACCESO ADMINISTRADOR */
+
+#formAdmin {
+    position: relative;
+    z-index: 1002;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#formAdmin input,
+#formAdmin button {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.captcha-pregunta {
+    display: block;
+    margin: 14px 0 8px;
+    padding: 10px;
+    border: 2px solid #7b1e3a;
+    border-radius: 6px;
+    background: #f8edf1;
+    color: #4f1025;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* BÚSQUEDA */
+
+.busqueda {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 20px;
+}
+
+.busqueda input,
+.busqueda select {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+.busqueda input {
+    width: 250px;
+}
+
+.busqueda button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #800020;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* TÍTULOS */
+
+.titulo-seccion,
+.solicitar h2,
+.registro h2,
+.solicitados h2 {
+    text-align: center;
+}
+
+.limite,
+.contador {
+    text-align: center;
+}
+
+
+/* MATERIALES */
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+
+/* TARJETAS */
+
+.tarjeta {
+    background-color: white;
+    color: #222;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px black;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.disponible {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* BOTONES DE PRÉSTAMO */
+
+.btn-prestamo,
+.btn-continuar {
+    background-color: #800020;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-prestamo:hover,
+.btn-continuar:hover {
+    background-color: #a00030;
+}
+
+
+/* SECCIÓN SOLICITAR */
+
+.solicitar {
+    padding: 60px 20px;
+    background-color: #172544;
+    margin-top: 30px;
+}
+
+.lista-solicitados {
+    max-width: 700px;
+    margin: 25px auto;
+}
+
+.material-elegido {
+    background-color: white;
+    color: #222;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-eliminar {
+    background-color: #b00020;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* REGISTRO */
+
+.panel {
+    margin: 35px auto;
+    padding: 28px;
+    border-radius: 14px;
+    background-color: white;
+    color: #263449;
+    box-shadow: 0 5px 16px #0003;
+}
+
+.panel > h2 {
+    margin-bottom: 8px;
+    color: #741d35;
+    text-align: center;
+}
+
+.subtitulo {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+#formRegistro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formRegistro label {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid #cbd2dc;
+    border-radius: 7px;
+    background-color: white;
+    color: #263449;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #741d35;
+    outline-offset: 1px;
+}
+
+#btnRegistro {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.aviso {
+    background-color: #fff3cd;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+
+/* RESULTADO */
+
+.solicitados {
+    padding: 50px 20px;
+}
+
+.texto-vacio {
+    text-align: center;
+    opacity: 0.8;
+}
+
+.prestamo-final {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: white;
+    color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.estado-prestamo {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #800020;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* REGISTRO DE ADMINISTRADOR */
+
+.registro-admin {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: right;
+}
+
+.registro-admin h2 {
+    margin-bottom: 15px;
+}
+
+.registro-admin p {
+    margin-bottom: 25px;
+}
+
+.registro-admin input {
+    display: block;
+    width: 90%;
+    padding: 12px;
+    margin: 15px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.registro-admin input:focus {
+    outline: none;
+    border-color: #7b1e3a;
+}
+
+.registro-admin .btn-continuar {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7b1e3a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.registro-admin .btn-continuar:hover {
+    background-color: #5e172d;
+}
+
+
+/* PANEL DE ADMINISTRADOR */
+
+.panel-admin {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: white;
+    color: #263449;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.panel-admin h2 {
+    margin-bottom: 15px;
+}
+
+.panel-admin p {
+    margin-bottom: 30px;
+}
+
+.opciones-admin {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.opciones-admin a {
+    padding: 15px 20px;
+    background-color: #123b63;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.opciones-admin a:hover {
+    background-color: #0c2945;
+}
+
+
+/* TABLA DEL PANEL DE ADMINISTRADOR */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.tabla-admin th {
+    background-color: #7b1e3a;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #5e162d;
+    font-size: 16px;
+}
+
+.tabla-admin td {
+    padding: 14px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    color: #222222;
+    background-color: #ffffff;
+    font-size: 15px;
+}
+
+.tabla-admin tr:nth-child(even) td {
+    background-color: #f2f2f2;
+    color: #222222;
+}
+
+.tabla-admin tr:hover td {
+    background-color: #e8e8e8;
+    color: #111111;
+}
+
+
+/* ESTADO DISPONIBLE */
+
+.disponible-admin {
+    display: inline-block;
+    padding: 7px 12px;
+    background-color: #198754;
+    color: #ffffff !important;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* ESTADO EN PRÉSTAMO */
+
+.prestado-admin {
+    display: inline-block;
+    padding: 7px 12px;
+    background-color: #dc3545;
+    color: #ffffff !important;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* TEXTO DENTRO DE LA TABLA */
+
+.tabla-admin strong {
+    color: #222222;
+}
+
+
+/* ADMINISTRADOR */
+
+.administrador {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.administrador h2 {
+    color: #222222;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.administrador p {
+    margin-bottom: 25px;
+}
+
+.administrador input {
+    display: block;
+    width: 90%;
+    padding: 12px;
+    margin: 15px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.administrador input:focus {
+    outline: none;
+    border-color: #7b1e3a;
+}
+
+.administrador .btn-continuar {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7b1e3a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.registro h5 {
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+
+/* CHATBOT */
+
+.chatbot {
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.chatbot-header {
+    background: #7b1e3a;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+}
+
+.chatbot-header span {
+    font-size: 13px;
+    color: #90ee90;
+}
+
+.chatbot-body {
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f5f5f5;
+}
+
+.mensaje {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 15px;
+    max-width: 80%;
+}
+
+.mensaje.bot {
+    background: #e0e0e0;
+    color: #222;
+    margin-right: auto;
+}
+
+.mensaje.usuario {
+    background: #7b1e3a;
+    color: white;
+    margin-left: auto;
+}
+
+.chatbot-footer {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background: white;
+}
+
+.chatbot-footer input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.chatbot-footer button {
+    padding: 12px 18px;
+    background: #7b1e3a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.chatbot-footer button:hover {
+    background: #7b1e3a;
+}
+
+
+/* CHATBOT FLOTANTE */
+
+.asistente-flotante {
+    position: fixed;
+    right: 22px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+.mascota-jaguar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: #741d35;
+    color: white;
+    box-shadow: 0 5px 20px #0005;
+    font-size: 40px;
+}
+
+.mascota-jaguar:hover {
+    background-color: #521326;
+}
+
+.texto-mascota {
+    position: absolute;
+    right: 78px;
+    width: max-content;
+    padding: 7px 11px;
+    border-radius: 15px;
+    background-color: white;
+    color: #263449;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 3px 12px #0002;
+}
+
+.ventana-chat {
+    position: absolute;
+    right: 0;
+    bottom: 88px;
+    display: flex;
+    flex-direction: column;
+    width: min(360px, calc(100vw - 30px));
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+    color: #263449;
+    box-shadow: 0 8px 35px #0004;
+}
+
+.ventana-chat[hidden],
+#panelAdmin[hidden] {
+    display: none !important;
+}
+
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #741d35;
+    color: white;
+}
+
+.chatbot-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 19px;
+    text-align: left;
+}
+
+.chatbot-header p {
+    font-size: 12px;
+}
+
+.cerrar-chat {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffffff25;
+    color: white;
+}
+
+.ventana-chat .chatbot-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 260px;
+    overflow-y: auto;
+    padding: 14px;
+    background-color: #f4f6f9;
+}
+
+.mensaje-chat {
+    max-width: 90%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+.mensaje-chat.bot {
+    align-self: flex-start;
+    border: 1px solid #e0e4ea;
+    background-color: white;
+}
+
+.mensaje-chat.usuario {
+    align-self: flex-end;
+    background-color: #741d35;
+    color: white;
+}
+
+.ventana-chat .chatbot-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: white;
+}
+
+.ventana-chat .chatbot-footer input {
+    flex: 1;
+}
+
+.ventana-chat .chatbot-footer #btnEnviar {
+    width: auto;
+}
+
+
+/* AJUSTES PARA PANTALLAS PEQUEÑAS */
+
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .menu {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .admin-menu {
+        top: 10px;
+        right: 10px;
+    }
+
+    .admin-desplegable {
+        width: min(320px, calc(100vw - 30px));
+        max-height: 70vh;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .panel-admin {
+        width: 95%;
+        padding: 18px;
+    }
+
+    .tabla-admin th,
+    .tabla-admin td {
+        padding: 9px;
+        font-size: 13px;
+    }
+}
+.btn-prestamo {
+    background-color: #741D35;
+    color: #FFFFFF;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón azul cuando el material está seleccionado */
+.btn-prestamo.seleccionado {
+    background-color: #1b344f;
+    color: #FFFFFF;
+}
+
+/* Azul más oscuro al pasar el cursor */
+.btn-prestamo.seleccionado:hover {
+    background-color: #1b344f;
+}
+
+/* Botón deshabilitado */
+.btn-prestamo:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Folio de préstamo destacado para que el alumno pueda guardarlo */
+.folio-destacado {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 12px 16px;
+    border: 2px solid #b44b62;
+    border-radius: 8px;
+    background: #fff3f5;
+    color: #8d3047;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: .4px;
+}
+.prestamo-final {
+    margin: 16px 0;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #d8a0ad;
+    background: #fffafb;
+}
+.prestamo-final button {
+    margin-top: 8px;
+}
+
+/* Aviso visible del folio para la devolución */
+.aviso-folio {
+    border: 3px solid #800020;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 18px 0;
+    text-align: center;
+    background: #fff8fa;
+    color: #24101a;
+}
+.aviso-folio h2 {
+    color: #800020;
+    font-size: 1.35rem;
+    margin: 0 0 10px;
+    overflow-wrap: anywhere;
+}
+.aviso-folio p { font-size: .98rem; font-weight: 600; }
+.aviso-folio > p { margin: 0 0 10px; }
+#accesoAlumno { padding: 18px; border-radius: 10px; }
+#accesoAlumno input, #accesoAlumno select { margin-bottom: 10px; }
+
+/* Registro desplegable y resumen de la solicitud */
+#btnMostrarRegistroAlumno { margin: 8px 0 16px; }
+#contenidoRegistroAlumno { margin-top: 12px; }
+#contenidoRegistroAlumno[hidden] { display: none !important; }
+#formRegistro input, #formRegistro select { margin-bottom: 10px; }
+.resumen-solicitud { text-align: left; max-width: 620px; margin: 16px auto 0; padding: 14px 18px; border-radius: 9px; background: #fff; border: 1px solid #ead4da; }
+.resumen-solicitud p { margin: 7px 0; overflow-wrap: anywhere; }
+#btnCancelarSolicitud { margin-left: 6px; }
+@media (max-width: 600px) {
+    #btnCancelarSolicitud { margin: 8px 0 0; }
+}
+
+/* Acceso del alumno en la esquina superior derecha, junto al administrador */
+.alumno-menu {
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    z-index: 1001;
+}
+.alumno-menu summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 14px;
+    border: 1px solid #ffffff80;
+    border-radius: 8px;
+    background-color: #ffffff18;
+    color: white;
+    font-weight: bold;
+    max-width: 230px;
+}
+.alumno-menu summary::-webkit-details-marker { display: none; }
+.alumno-menu summary:hover { background-color: #ffffff30; }
+.alumno-desplegable {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(350px, 90vw);
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+    color: #263449;
+    box-shadow: 0 10px 30px #0004;
+    z-index: 1002;
+}
+.alumno-desplegable h3 { margin-top: 0; color: #800020; }
+.alumno-desplegable label { display: block; margin-top: 10px; font-weight: bold; }
+.alumno-desplegable input, .alumno-desplegable select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccd2dc;
+    border-radius: 6px;
+}
+.acciones-cuenta { display: grid; gap: 8px; margin-top: 14px; }
+.acciones-cuenta button { width: 100%; margin: 0; }
+.alumno-desplegable .mensaje { overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+    .encabezado { padding-top: 72px; }
+    .alumno-menu { top: 52px; right: 10px; }
+    .admin-menu { top: 10px; right: 10px; }
+    .encabezado { padding-bottom: 58px; }
+    .alumno-menu summary, .admin-menu summary { padding: 8px 10px; font-size: 12px; }
+    .alumno-desplegable { position: fixed; top: 55px; right: 10px; width: min(350px, calc(100vw - 20px)); max-height: 75vh; }
+}
+
+
+/* Acabado uniforme para botones y acciones del formulario */
+button, .btn-secundario, .btn-continuar, .btn-prestamo {
+    font: inherit;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+button:not(:disabled) { cursor: pointer; }
+.btn-secundario {
+    background: #f7edf0; color: #781d35; border: 1px solid #b56b7d;
+    padding: 10px 16px; box-shadow: 0 2px 5px #00000012;
+}
+.btn-secundario:hover { background: #ead2d9; box-shadow: 0 4px 9px #0002; transform: translateY(-1px); }
+.btn-continuar:hover, .btn-prestamo:hover { box-shadow: 0 4px 9px #0003; transform: translateY(-1px); }
+button:disabled { opacity: .6; cursor: wait; }
+#btnEditarRegistro, #btnCancelarEdicion, #btnCancelarSolicitud, #formRegistro .acciones-formulario button { margin-top: 8px; }
+.acciones-sesion-final { margin-top: 20px; padding-top: 14px; border-top: 1px solid #ead4da; text-align: center; }
+.acciones-sesion-final p { font-size: .9rem; color: #596273; }
+.btn-cerrar-sesion { background: #800020; color: white; border-color: #800020; }
+.btn-cerrar-sesion:hover { background: #a00030; color: white; }
+#formCuentaAlumno .btn-secundario { background: #f7edf0; color: #781d35; }
